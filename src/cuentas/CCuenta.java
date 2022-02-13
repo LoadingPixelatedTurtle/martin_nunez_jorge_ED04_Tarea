@@ -4,6 +4,9 @@
  */
 package cuentas;
 
+/**
+ * @author jorma 
+ */
 public class CCuenta {
 
     private String nombre;
@@ -11,19 +14,38 @@ public class CCuenta {
     private double saldo;
     private double tipoInteres;
 
+    /**
+     *
+     */
     public CCuenta() {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
         cuenta = cue;
         saldo = sal;
     }
 
+    /**
+     *
+     * @return Devuelve el valor del saldo
+     */
     public double estado() {
         return getSaldo();
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
             throw new Exception("No se puede ingresar una cantidad negativa");
@@ -31,6 +53,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception {
         if (cantidad <= 0) {
             throw new Exception("No se puede retirar una cantidad negativa");
@@ -42,56 +69,56 @@ public class CCuenta {
     }
 
     /**
-     * @return the nombre
+     * @return El nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre El nombre a establecer
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * @return La cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * @param cuenta La cuenta a establecer
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * @return El saldo
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * @param saldo El saldo a establecer
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInteres
+     * @return El tipo de interes
      */
     public double getTipoInteres() {
         return tipoInteres;
     }
 
     /**
-     * @param tipoInteres the tipoInteres to set
+     * @param tipoInteres El tipo de interes a establecer
      */
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
